@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+
+  web:
+    image: nginx
+    volumes:
+    - ./src:/usr/share/nginx/html
+    ports:
+    - "8080:80"
+    command: [nginx-debug, '-g', 'daemon off;']
